@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        Ext.Loader.setConfig({
+            paths: {
+                'chapter4': 'src'
+            }
+        });
+        Ext.require([
+           'chapter4.VBoxLayout'
+        ]);
+
+        Ext.onReady(function () {
+            Ext.create('Ext.panel.Panel',{
+                layout: {
+                    type: 'vbox',
+                    align: 'stretch'
+                },
+                title: '부모.',
+                width: 500,
+                border: true,
+                items: [
+                    {
+                        xtype: 'panel',
+//                        width: 300,
+                        height: 100,
+                        border: true,
+                        title: 'Header'
+                    },
+                    {
+                        xtype: 'container',
+                        layout: 'hbox',
+                        height: 200,
+                        items: [
+                            {
+                                xtype: 'panel',
+                                width: 100,
+                                title: '메뉴'
+                            },
+                            {
+                                xtype: 'panel',
+                                title: '프로그램영역',
+                                flex:.5
+                            },
+                            {
+                                xtype: 'panel',
+                                title: '프로그램영역',
+                                flex:.5
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        height: 200,
+                        html :'footer....'
+                    }
+                ],
+                renderTo : document.body
+            })
+        })
+    </script>
+</body>
+</html>

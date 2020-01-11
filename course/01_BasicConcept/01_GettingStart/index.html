@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    // Ext.onReady 내부에 ExtJS코드를 실행한다.
+    Ext.onReady(function() {
+        var versions = Ext.versions;
+       console.log('Ext JS Version : ', versions.ext.version);
+
+       Ext.create('Ext.panel.Panel',{
+           title: 'Ext JS Version : '+versions.ext.version,
+           renderTo : document.body,
+           html: 'Browser : ' + versions['Chrome'].version
+       });
+    });
+    </script>
+</body>
+</html>

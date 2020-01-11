@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+    Ext.onReady(function () {
+        Ext.create('Ext.panel.Panel', {
+            title: 'Simple Form',
+
+            viewModel: {
+                data: {
+                    name: '김어준',
+                    someWidth: 300,
+                    btnStatus: true
+                }
+            },
+
+            bind: {
+                html: '<p>Hello {name}</p>',
+                width: '{someWidth}'
+            },
+            items: [{
+                xtype: 'button',
+                text: 'Bind hidden',
+                bind: {
+                    hidden: '{!btnStatus}'  // negated
+                }
+            }],
+            renderTo: document.body
+        });
+    });
+</script>
+</body>
+</html>

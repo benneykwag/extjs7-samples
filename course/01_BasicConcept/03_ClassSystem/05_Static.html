@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    // Ext.onReady 내부에 ExtJS코드를 실행한다.
+    Ext.onReady(function() {
+        Ext.define('Computer', {
+            extend: 'Ext.Component',
+            statics: {
+                instanceCount: 0,
+                factory: function(brand) {
+                    // 'this' in static methods refer to the class itself
+                    return new this({brand: brand});
+                }
+            },
+
+            config: {
+                brand: null
+            }
+        });
+
+        var dellComputer = Computer.factory('Dell');
+        var appleComputer = Computer.factory('Mac');
+
+        console.log(appleComputer.getBrand());
+    });
+    </script>
+</body>
+</html>

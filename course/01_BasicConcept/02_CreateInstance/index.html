@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    // Ext.onReady 내부에 ExtJS코드를 실행한다.
+    Ext.onReady(function() {
+        // class full name을 이용해 인스턴스생성.
+       Ext.create('Ext.button.Button',{
+           text: 'Hello World',
+           renderTo : 'button'
+       });
+
+       Ext.create('Ext.panel.Panel',{
+           title: 'Ext.panel.Panel',
+           width: 200,
+           height: 200,
+           renderTo : 'panel'
+       });
+       // class alias를 이용해 인스턴스 생성..
+       Ext.widget('form',{
+           width: 200,
+           height: 200,
+           title: 'Ext.form.Panel',
+           renderTo: 'form'
+       })
+    });
+    </script>
+</body>
+<div id="button"></div>
+
+<div id="panel"></div>
+
+<div id="form"></div>
+</html>

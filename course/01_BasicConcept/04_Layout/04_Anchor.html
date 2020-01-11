@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        Ext.Loader.setConfig({
+            paths: {
+                'chapter4': 'src'
+            }
+        });
+        Ext.require([
+           'chapter4.AnchorLayout'
+        ]);
+
+        Ext.onReady(function () {
+            Ext.create('chapter4.AnchorLayout',{
+               renderTo: document.body
+            });
+        })
+    </script>
+</body>
+</html>

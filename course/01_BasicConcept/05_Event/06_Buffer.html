@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'chapter5' : 'src'
+        }
+    });
+    Ext.require([
+    ])
+    Ext.onReady(function() {
+
+
+       /**
+        * 짧은 시간 내에 여러 번 실행되는 이벤트의 경우, buffer를 사용할수 있다.
+        * 이 경우 버튼의 클릭 리스너는 클릭 한 횟수에 관계없이 2 초마다 한 번만 호출된다.
+        */
+        var button = Ext.create('Ext.Button', {
+            renderTo: Ext.getBody(),
+            text: 'Click Me',
+            listeners: {
+                click: {
+                    buffer: 2000,
+                    fn: function() {
+                        Ext.Msg.alert('Success!', 'I say this only once every 2 seconds');
+                    }
+                }
+            }
+        });
+
+
+
+
+    });
+    </script>
+</body>
+</html>

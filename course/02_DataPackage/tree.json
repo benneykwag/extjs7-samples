@@ -1,0 +1,33 @@
+{
+    "data": [
+        {
+            "text": "업무유형",
+            "expanded": true,
+            "children": [
+                {
+                    "text": "구매",
+                    "expanded": true,
+                    "children": [
+                        {
+                            "text": "구매관리",
+                            "children": [
+                                {
+                                    "text": "공급업체 진단",
+                                    "leaf": true,
+                                    "checked": true
+                                },
+                                {
+                                    "text": "구매계약체결",
+                                    "leaf": true,
+                                    "checked": true
+                                }
+                            ]
+                        }
+                    ],
+                    "leaf": false
+                }
+            ],
+            "leaf": false,
+            "checked": true
+        }
+    ]}

@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "name": "홍길동",
+            "title": "안녕하세요^^",
+            "userName": "홍길동2",
+            "content": "게시물 내용을.",
+            "role": "Admin",
+            "readCnt": 300
+        },
+        {
+            "name": "이순신",
+            "title": "안녕하세요^^",
+            "userName": "홍길동2",
+            "content": "게시물 내용을.",
+            "role": "Admin",
+            "readCnt": 300
+        }
+    ]
+}

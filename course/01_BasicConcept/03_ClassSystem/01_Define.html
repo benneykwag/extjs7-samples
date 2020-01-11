@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+    <script src="src/Person.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    // Ext.onReady 내부에 ExtJS코드를 실행한다.
+    Ext.onReady(function() {
+        var bob = Ext.create('ClassSystem.Person', { name: 'Bob'});
+        
+        bob.eat("Salad"); // alert("Bob is eating: Salad");
+
+
+        Ext.define('My.awesome.Class', {
+            // The default config
+            config: {
+                name: 'Awesome',
+                isAwesome: true
+            },
+
+            constructor: function(config) {
+                this.initConfig(config);
+            }
+        });
+
+        var awesome = Ext.create('My.awesome.Class', {
+            name: 'Super Awesome'
+        });
+
+        alert(awesome.getName()); // 'Super Awesome'
+    });
+    </script>
+</body>
+</html>

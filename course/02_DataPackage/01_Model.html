@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'DataPackage': 'src'
+        }
+    });
+    Ext.require([
+        'DataPackage.model.Board'
+    ]);
+    Ext.onReady(function () {
+        // 모델을 생성하고 필드를 채운다.
+        var board = Ext.create('DataPackage.model.Board', {
+            id: 1,
+            title: '안녕하세요^^',
+            userName: '홍길동2',
+            content: '게시물 내용을.',
+            role: 'Admin',
+            readCnt: 300,
+            createDate: new Date(),
+            deleteYn: false
+        });
+        console.log(board.getData());
+        // 생성된 모델을 검증한다.
+        var data = board.getValidation();
+        console.log('오류발견여부  :', data.getData());
+    });
+</script>
+</body>
+</html>

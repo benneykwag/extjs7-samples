@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+    
+</head>
+<body>
+    <script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'ClassSystem' : 'src'
+        }
+    });
+    Ext.require([
+    ])
+    Ext.onReady(function() {
+        // Component Initialization
+        /*1. Configuration Applied
+            구성요소가 적용되는 단계로 인스턴스화에 필요한 구성요소 개체를 전달
+            이 구성 개체에는 모든 매개변수 및 참조가 포함.
+        2. Base event Registration
+            이벤트 등록 : 모든 클래스에는 핵심 이벤트가 있다.
+            Active, DeActive, Show, Hide, Render, Destroy 등등..
+        3. ID Assigned or auto generate
+            id를 할당하거나 자동 생성.
+            자동으로 생성할 경우 xtype이후에 숫자 1000으로 시작.
+        4. Pre-initComponent Plugin Constructed
+            initComponent가 실행되기전에 정의된 모든 플러그인이 생성
+            ex) grid editor
+        5. initComponent
+            하위 클래스의 이벤트 등록, 데이터 참조 , 구성요소 생성 등
+            일반적인 확장한 클래스의 필요한 많은 작업이 이루어진다.
+        6. ComponentManager Registration
+            클래스가 인스턴스화 되고 이후 ComponentManager클래스에 등록되어
+            관리되어 진다.
+        7. Component Rendered
+            renderTo, applyTo 변수가 전달되면 렌더링 단계가 시작된다.*/
+    });
+    </script>
+</body>
+</html>

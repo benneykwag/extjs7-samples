@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    Ext.onReady(function() {
+        Ext.define('ClassSystem.LifeCycle', {
+            extend: 'Ext.Component',
+
+            // initialization
+            initComponent: function(){
+                console.log('init..');
+                this.callParent(arguments);
+            },
+
+            listeners: {
+                beforerender: function () {
+                    console.log('beforerender..');
+                },
+                afterrender: function () {
+                    console.log('afterrender..');
+                },
+                render: function () {
+                    console.log('render..');
+                },
+                destroy: function () {
+                    console.log('destroy..')
+                }
+            }
+        });
+        // case 1
+        var component = Ext.create('ClassSystem.LifeCycle', {
+            renderTo: document.body,
+            html: 'Hello World'
+        });
+       // component.destroy();
+    });
+</script>
+</body>
+</html>

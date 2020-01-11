@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'chapter5' : 'src'
+        }
+    });
+    Ext.require([
+    ])
+    Ext.onReady(function() {
+
+        /***
+         * 리스너를 언제든지 추가 할 수있는 것처럼 제거 할 수도 있다. 
+         * 리스너의 제거는 un함수를 사용한다 .
+         */
+         var doSomething = function() {
+            Ext.Msg.alert('Success!', 'listener called');
+        };
+
+        var button = Ext.create('Ext.Button', {
+            renderTo: Ext.getBody(),
+            text: 'My Button',
+            listeners: {
+                click: doSomething
+            }
+        });
+
+        Ext.defer(function() {
+            button.un('click', doSomething);
+        }, 3000);
+
+
+
+    });
+    </script>
+</body>
+</html>

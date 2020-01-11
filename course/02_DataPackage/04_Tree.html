@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'DataPackage': 'src'
+        }
+    });
+    Ext.require([
+        'DataPackage.view.DataGrid'
+    ]);
+    Ext.onReady(function () {
+        var store = Ext.create('Ext.data.TreeStore', {
+            type: 'tree',
+            proxy: {
+                type: 'ajax',
+                url: 'tree.json',
+                reader: {
+                    type: 'json',
+                    rootProperty: function (data) {
+                        return data.data || data.children;
+                    }
+                }
+            }
+        });
+
+        Ext.create('Ext.tree.Panel', {
+            title: 'Simple Tree',
+            width: 600,
+            height: 500,
+            store: store,
+            rootVisible: false,
+            renderTo: Ext.getBody()
+        });
+    });
+</script>
+</body>
+</html>

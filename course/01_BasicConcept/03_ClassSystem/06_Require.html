@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+    <!-- <script src="src/Car.js"></script> -->
+    <!-- <script src="src/Sonata.js"></script> -->
+</head>
+<body>
+<script type="text/javascript">
+        // 패스 설정.
+        Ext.Loader.setConfig({
+            paths: {
+                'ClassSystem': 'src'
+            }
+        });
+        // 필요한 클래스를 불러온다
+        // Ext.require([
+        //     'ClassSystem.Truck',
+        //     'ClassSystem.Sonata'
+        // ]);
+
+        Ext.onReady(function () {
+            /**
+             * step1 Ext.create로 클래스인스턴스 생성
+             **/
+            var sonata = Ext.create('ClassSystem.Sonata');
+            // console.log(sonata.missionType);
+            // sonata.run(40);
+
+            // Ext.widget('sonata')
+        });
+
+
+</script>
+</body>
+</html>
+

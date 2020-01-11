@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'chapter5' : 'src'
+        }
+    });
+    Ext.require([
+    ])
+    Ext.onReady(function() {
+
+        /***
+         * 자신의 이벤트를 실행하는 fireEvent것은 이벤트 이름 으로 호출 하여 수행됩니다 .
+         * 다음 예제에서는 단추 자체와 1에서 100 사이의 임의의 숫자라는 두 개의 인수를 전달하는
+         * myEvent라는 이벤트를 발생시킵니다.
+         */
+         var button = Ext.create('Ext.Button', {
+            renderTo: Ext.getBody(),
+            text: "Just wait 2 seconds",
+            listeners: {
+                myEvent: function(button, points) {
+                    Ext.Msg.alert('Success!', 'myEvent fired! You score ' + points + ' points');
+                }
+            }
+        });
+        
+        Ext.defer(function() {
+            var number = Math.ceil(Math.random() * 100);
+        
+            button.fireEvent('myEvent', button, number);
+        }, 2000);
+
+
+    });
+    </script>
+</body>
+</html>

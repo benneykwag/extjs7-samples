@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'chapter5' : 'src'
+        }
+    });
+    Ext.require([
+    ])
+    Ext.onReady(function() {
+        /**
+         * 흥미로운 일이 발생할 때마다 이벤트가 발생합니다. 예를 들어 Ext.Component 가 
+         * 화면에 렌더링 될 때 Ext JS는 렌더링이 완료된 후 이벤트를 발생시킵니다.
+         * 간단한 listeners객체 를 구성하여 해당 이벤트를 수신 할 수 있습니다 
+         **/
+
+        /**Ext.create('Ext.Button', {
+            renderTo: Ext.getBody(),
+            text: 'My Button',
+            listeners: {
+                mouseover: function() {
+                    this.hide();
+                },
+                hide: function() {
+                    // Waits 1 second (1000ms), then shows the button again
+                    Ext.defer(function() {
+                        this.show();
+                    }, 1000, this);
+                }
+            }
+        });
+**/
+        // 이전 예제에서는 클래스가 인스턴스화 될 때 리스너를 구성 요소에 전달했다.
+        // 그러나 이미 인스턴스가있는 경우 다음 on 함수를 사용하여 리스너를 추가 할 수 있다 .
+        // var button = Ext.create('Ext.Button', {
+        //     renderTo: Ext.getBody(),
+        //     text: 'My Button'
+        // });
+
+        // button.on('click', function() {
+        //     Ext.Msg.alert('Success!', 'Event listener attached by .on');
+        // });
+        
+        var button = Ext.create('Ext.Button', {
+            renderTo: Ext.getBody(),
+            text: 'My Button'
+        });
+
+        button.on({
+            mouseover: function() {
+                this.hide();
+            },
+            hide: function() {
+                Ext.defer(function() {
+                    this.show();
+                }, 1000, this);
+            }
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    Ext.Loader.setConfig({
+        paths: {
+            'chapter5' : 'src'
+        }
+    });
+    Ext.require([
+    ]);
+    Ext.onReady(function() {
+        /**
+         * 흥미로운 일이 발생할 때마다 이벤트가 발생합니다. 예를 들어 Ext.Component 가 
+         * 화면에 렌더링 될 때 Ext JS는 렌더링이 완료된 후 이벤트를 발생시킵니다.
+         * 간단한 listeners객체 를 구성하여 해당 이벤트를 수신 할 수 있습니다 
+         **/
+
+        Ext.create('Ext.Panel', {
+            html: 'My Panel',
+            renderTo: Ext.getBody(),
+            listeners: {
+                afterrender: function() {
+                    Ext.Msg.alert('Success!', 'We have been rendered');
+                }
+            }
+        });
+        
+    });
+    </script>
+</body>
+</html>

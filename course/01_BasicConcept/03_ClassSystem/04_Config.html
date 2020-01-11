@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    // Ext.onReady 내부에 ExtJS코드를 실행한다.
+    Ext.onReady(function() {
+
+        Ext.define('My.own.Window', {
+            extend: 'Ext.Component',
+            config: {
+                title: 'Title Here',
+         
+                bottomBar: {
+                    height: 50,
+                    resizable: false
+                }
+            },
+         
+            applyTitle: function(title) {
+                if (!Ext.isString(title) || title.length === 0) {
+                    alert('Error: Title must be a valid non-empty string');
+                }
+                else {
+                    return title;
+                }
+            },
+         
+            applyBottomBar: function(bottomBar) {
+                if (bottomBar) {
+                    if (!this.bottomBar) {
+                        return Ext.create('My.own.WindowBottomBar', bottomBar);
+                    }
+                    else {
+                        this.bottomBar.setConfig(bottomBar);
+                    }
+                }
+            }
+         });
+
+
+         
+         /** A child component to complete the example. */
+         Ext.define('My.own.WindowBottomBar', {
+            config: {
+                height: undefined,
+                resizable: true
+            }
+         });
+
+         var myWindow = Ext.create('My.own.Window', {
+            title: 'Hello World',
+            bottomBar: {
+                height: 60
+            }
+        });
+        alert(myWindow.getTitle()); // alerts "Hello World"
+
+        myWindow.setTitle('Something New');
+
+        alert(myWindow.getTitle()); // alerts "Something New"
+
+        myWindow.setTitle(null); // alerts "Error: Title must be a valid non-empty string"
+
+        myWindow.setBottomBar({ height: 100 });
+
+        alert(myWindow.getBottomBar().getHeight()); // alerts 100
+    });
+    </script>
+</body>
+</html>

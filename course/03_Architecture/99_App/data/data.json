@@ -1,0 +1,71 @@
+{
+    "success": true,
+    "total": 5,
+    "data": [
+        {
+            "id": "1",
+            "name": "AT&T Inc.",
+            "addrStreet": "32 Avenue of the Americas",
+            "addrCity": "New York, N.Y. 10013-2412",
+            "addrCountry": "U.S.A.",
+            "phone": "(0800) 331-0500",
+            "website": "www.att.com",
+            "email": "invo@att.com",
+            "regId": "13578936788",
+            "taxId": "US13578936788",
+            "note": null
+        },
+        {
+            "id": "2",
+            "name": "Hewlett-Packard Co.",
+            "addrStreet": "3000 Hanover Street",
+            "addrCity": "94304-1185, Palo Alto, CA",
+            "addrCountry": "U.S.A.",
+            "phone": "(+1) 650-857-1501",
+            "website": "hp.com",
+            "email": "office@hp.com",
+            "regId": "234598459",
+            "taxId": "US234598459",
+            "note": null
+        },
+        {
+            "id": "3",
+            "name": "Exxon Mobil Corp",
+            "addrStreet": "5959 Las Colinas Boulevard",
+            "addrCity": "Irving, Texas 75039-2298",
+            "addrCountry": "U.S.A.",
+            "phone": "(972) 444-1000",
+            "website": "exxon.com",
+            "email": "office@exxon.com",
+            "regId": "23453456345",
+            "taxId": "US23453456345",
+            "note": null
+        },
+        {
+            "id": "4",
+            "name": "Robert Bosch GmbH",
+            "addrStreet": "Postfach 30 02 20",
+            "addrCity": "70442 Stuttgart",
+            "addrCountry": "Germany",
+            "phone": "+49 (0)711 400 40990",
+            "website": "bosch.com",
+            "email": "office@bosch.com",
+            "regId": "1234567890",
+            "taxId": "DE1234567890",
+            "note": null
+        },
+        {
+            "id": "5",
+            "name": "Airbus, Inc.",
+            "addrStreet": "1, Rond Point Maurice Bellonte",
+            "addrCity": "31707 Blagnac Cedex",
+            "addrCountry": "France",
+            "phone": "+33 5 61 93 33 33",
+            "website": "airbus.com",
+            "email": "office@airbus.com",
+            "regId": "987654011",
+            "taxId": "FR987654011",
+            "note": null
+        }
+    ]
+}
