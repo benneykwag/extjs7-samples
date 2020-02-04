@@ -5,7 +5,10 @@
     "apps": [
         "extjs7-classic-example",
         "extjs7-modern-example",
-        "extjs7-univ-example"
+        "extjs7-univ-example",
+        "MyClaApp",
+        "MyClaApp2",
+        "Myapp"
     ],
 
     /**

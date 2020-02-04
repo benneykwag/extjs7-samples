@@ -1,0 +1,108 @@
+td .x-field-label-cell :nth-last-child(2) {
+  border-left:2px solid #ddd;
+}
+
+.x-field-label-cell {
+  color: black;
+  font-size:12px ;
+  font-family: dotum, arial !important;
+  padding:0;
+  background-color:#f8f8f8;
+  border:1px solid #ddd;
+  font-weight: bold !important;
+}
+
+.x-form-item-label {
+  font-family: dotum, arial !important;
+  font-weight: bold !important;
+  color:#666 !important;
+}
+
+.x-table-layout {
+  font-size: 1em; margin:0; border:1px solid #ddd; padding:5px; border-spacing:0px;  border-collapse:collapse;
+   vertical-align: middle !important;
+}
+
+.x-table-layout-cell {
+  vertical-align: middle !important;  padding:0 5px; border-spacing:0px;  border-collapse:collapse;
+  }
+
+.x-form-item-body {padding-left:5px; }
+.x-field-label-cell {padding-left:5px;}
+
+ .x-form-item-label {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+.x-panel-header-default {
+  background-image: none;
+  background-color: #fff !important;
+}
+
+.x-tool-img {
+  overflow: hidden;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/tool-sprites-dark.png) !important;
+  margin: 0;
+}
+
+.x-panel-header-default .x-tool-img {
+  background-color: #fff !important;
+}
+
+.x-panel-header-text-container-default {
+  color: #000 !important;
+  font-size: 14px;
+  font-weight: bold;
+   font-family: dotum, arial !important;
+  line-height: 15px;
+  padding: 1px 0 0;
+  text-transform: none;
+}
+
+.x-panel-header-default-horizontal-noborder {
+  padding: 7px 5px;
+  border-bottom:2px solid #d7d7d7 !important ;
+}
+
+.x-body {
+  color: black;
+  font-size: 12px;
+  font-family:Arial,Malgun Gothic,Dotum,sans-serif;
+  background: #fff !important;
+}
+
+.x-btn-default-small .x-btn-inner {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: dotum, arial !important;
+  color: white;
+  padding: 0 5px;
+}
+
+.x-btn-default-toolbar-small .x-btn-inner {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: dotum, arial !important;
+  color: #666666;
+  padding: 0 5px;
+}
+
+.x-grid-locked .x-grid-inner-locked
+{border-width: 0 1px 0 0;
+border-style: solid;
+border-color: #c0c0c0;}
+
+.s_form {
+	background-color: #EEEEEE;
+	padding: 10px 15px;
+	/*font-weight: bold;*/
+}
+
+.s_form .x-field-label-cell {
+  background:none !important;
+  border:none !important;
+}

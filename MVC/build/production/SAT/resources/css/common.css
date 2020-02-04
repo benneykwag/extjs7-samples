@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+.login-top {
+    background: #6495ED;
+}
+
+.login-panel-title {
+    font-size: 25px;
+    font-weight: 600 !important;
+    display: block;
+    padding: 5px 20px 0px 10px;
+    color: #fff;
+}
+
+.login-panel-sub-title {
+    font-size: 15px;
+    font-weight: 600 !important;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    color: #fff;
+}
+
+.data-list {
+    padding: 0 3px 0 3px;
+}
+
+.data-list-item {
+    margin-top: 3px;
+    padding-left: 13px;
+    font-size: 11px;
+    line-height: 20px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.data-list .x-item-selected {
+    font-weight: bold;
+    color: #15428B;
+    background-color: #DFE8F6;
+    border: 1px dotted #A3BAE9;
+}
+
+.titled-component-header {
+    background-color: #5a7;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.custom-button-text-bold .x-btn-inner {
+    font-weight: bold;
+}
+
+.button-icon-film {
+    background-image: url(../imgs/icons/png/Film.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-display {
+    background-image: url(../imgs/icons/png/Display.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-move {
+    background-image: url(../imgs/icons/png/Move.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-trackback {
+    background-image: url(../imgs/icons/png/Trackback.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-exit {
+    background-image: url(../imgs/icons/png/Exit.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-home {
+    background-image: url(../imgs/icons/png/Home.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-component {
+    background-image: url(../imgs/icons/png/Component.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-help {
+    background-image: url(../imgs/icons/png/Helpbook.png);
+    background-repeat: no-repeat;
+}
+
+/*데이터 뷰에서 사용할 css */
+.dataview-list {
+    padding: 0 3px 0 3px;
+}
+
+.dataview-list-item {
+    margin-top: 3px;
+    padding-left: 13px;
+    font-size: 11px;
+    line-height: 20px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.dataview-list .x-item-selected {
+    font-weight: bold;
+    color: #15428B;
+    background-color: #DFE8F6;
+    border: 1px dotted #A3BAE9;
+}
+
+.dataview-list-item-hover {
+    background-color: #fffcd7;
+}
+
+/* 프로그램 데시보드 */
+.basic_round_board {
+    padding: 7px;
+    border: 2px solid #bcbec0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.blue_board {
+    border: 2px solid #3b73b9 !important;
+}

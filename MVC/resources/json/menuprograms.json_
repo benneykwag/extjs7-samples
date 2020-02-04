@@ -1,0 +1,41 @@
+{"success":false,"errMsg":"[Session]오랫동안 사용하지 않아 세션이 종료되었습니다. 다시 로그인 해주세요","errTitle":"세션종료","reload":true}
+//
+//{"entitys": [
+//{
+//    "pgmSysCd": "F001",
+//    "pgmClass": "Ext.container.Container",
+//    "iconCls": "button-icon-film",
+//    "pgmNm": "프로그램1",
+//    "pgmId": 1
+//},
+//    {
+//        "pgmSysCd": "F001",
+//        "pgmClass": "Ext.container.Container",
+//        "iconCls": "button-icon-exit",
+//        "pgmNm": "프로그램2",
+//        "pgmId": 2
+//    },
+//    {
+//        "pgmSysCd": "F002",
+//        "pgmClass": "Ext.container.Container",
+//        "iconCls": "button-icon-display",
+//        "pgmNm": "프로그램3",
+//        "pgmId": 3
+//    },
+//    {
+//        "pgmSysCd": "F002",
+//        "pgmClass": "Ext.container.Container",
+//        "iconCls": "button-icon-component",
+//        "pgmNm": "프로그램4",
+//        "pgmId": 4
+//    },
+//    {
+//        "pgmSysCd": "F002",
+//        "pgmClass": "Ext.container.Container",
+//        "iconCls": "button-icon-film",
+//        "pgmNm": "프로그램5",
+//        "pgmId": 5
+//    }
+//],
+//    "errMsg": "", "errTitle": "검색결과",
+//    "message": "", "success": true, "totalCount": "5"}

@@ -1,0 +1,33 @@
+{
+    "success":true,
+    "result":{
+        "dataId":"selectListCommonCode",
+        "list":[{
+            "scheduleDt":"2014-01-26","scheduleTitle":"ExtJS초급 강의", "studendCnt":"23명","area":"서울중구"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"서울중구"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"강남토즈"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"신촌토즈"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"서울마포구"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"역삼동"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"삼성동"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"서초구"
+        },
+        {
+            "scheduleDt":"2014-02-26","scheduleTitle":"ExtJS중급 강의", "studendCnt":"13명","area":"서울중구"
+        }]
+    }
+}
