@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+    Ext.onReady(function () {
+        Ext.define('MyApp.view.foo.Foo', {
+            extend: 'Ext.panel.Panel',
+            xtype: 'foo',
+            controller: 'foo',
+            viewModel: {
+                data: {
+                    title: 'LifeCycle',
+                }
+            },
+            bind: {
+                title: '{title}',
+            },
+            tbar: [{
+                xtype: 'button',
+                text: 'Destroy',
+                handler: 'onDestroy'
+            }],
+            initComponent: function(){
+                console.log('Foo initComponent...')
+                this.callParent(arguments)
+            }
+        });
+
+        Ext.define('MyApp.view.foo.FooController', {
+            extend: 'Ext.app.ViewController',
+            alias: 'controller.foo',
+            onDestroy: function(){
+                this.getView().destroy();
+            },
+            /**
+             * 이 메소드는 View initComponent 메소드가 호출되기 전 호출. 
+             * 이 메소드는 컨트롤러가 작성된 직후에 호출되며, 이는 구성 요소 생성자에서 
+             * 호출 된 initConfig 중에 발생합니다.
+             **/
+            beforeInit: function(){
+                console.log('beforeInit...')
+            },
+            /**
+             * initComponent가 호출 된 직후에 호출됩니다.
+             * 보기가 초기화되었으므로 이제 제어기에 대한 초기화를 
+             * 수행하는 일반적인 시간입니다.
+             **/
+            init: function(){
+                console.log('init...')
+            },
+            //  ViewModel이 생성 될 때 호출됩니다 (정의 된 경우).
+            initViewModel: function(){
+                console.log('initViewModel..', this.getViewModel())
+            },
+            destroy: function(){
+                console.log('destroy...')
+            }
+        });
+
+        Ext.create('MyApp.view.foo.Foo', {
+            heigth: 200,
+            renderTo: document.body
+        })
+    });
+</script>
+</body>
+</html>

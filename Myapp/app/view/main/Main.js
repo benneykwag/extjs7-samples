@@ -79,7 +79,7 @@ Ext.define('Myapp.view.main.Main', {
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
-            xtype: 'mainlist'
+            xtype: 'mypkgbutton'
         }]
     }, {
         title: 'Users',

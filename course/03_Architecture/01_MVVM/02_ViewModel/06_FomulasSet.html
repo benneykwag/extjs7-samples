@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.define('MyApp.view.TestViewModel', {
+        extend: 'Ext.app.ViewModel',
+
+        alias: 'viewmodel.test', // connects to viewModel/type below
+        data: {
+            firstName: 'John',
+            lastName: 'Doe',
+        },
+        formulas: {
+            name: {
+                get: function (get) {
+                    var fn = get('firstName'), ln = get('lastName');
+                    return (fn && ln) ? (fn + ' ' + ln) : (fn || ln || '');
+                },
+
+                set: function (value) {
+                    var space = value.indexOf(' '),
+                        split = (space < 0) ? value.length : space;
+
+                    this.set({
+                        firstName: value + this.get('firstName'), 
+                        lastName: value+ this.get('lastName')
+                    });
+                }
+            }
+        }
+    });
+
+    Ext.define('MyApp.view.TestView', {
+        extend: 'Ext.panel.Panel',
+        layout: 'form',
+        itemId: 'mypanel',
+        defaultListenerScope: true,
+        viewModel: {
+            type: 'test'
+        },
+        bind: {
+            title: '{name}'
+        },
+        defaultType: 'textfield',
+        items: [{
+            fieldLabel: 'First Name',
+            bind: '{firstName}'
+        },{
+            fieldLabel: 'Last Name',
+            bind: '{lastName}'
+        },{
+            fieldLabel: 'value',
+            
+        },{
+            xtype: 'button',
+            text: 'Submit',
+            handler: 'onSubmit'
+        }],
+        onSubmit: function(){
+            console.log('submit')
+            var value =  this.down('textfield[fieldLabel=value]')
+            this.getViewModel().set('name', value.getValue())
+        }
+    });
+
+    Ext.onReady(function () {
+       Ext.create('MyApp.view.TestView', {
+           renderTo: Ext.getBody(),
+           width: 400
+       });
+    });
+</script>
+</body>
+</html>

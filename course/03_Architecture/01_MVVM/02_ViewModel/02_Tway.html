@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.define('MyApp.view.TestViewModel', {
+        extend: 'Ext.app.ViewModel',
+
+        alias: 'viewmodel.test', // connects to viewModel/type below
+
+        data: {
+            firstName: 'John',
+            lastName: 'Doe',
+        },
+
+    });
+
+    Ext.define('MyApp.view.TestView', {
+        extend: 'Ext.panel.Panel',
+        layout: 'form',
+        itemId: 'mypanel',
+        viewModel: {
+            type: 'test'
+        },
+
+        bind: {
+            title: 'Hello',
+        },
+
+        defaultType: 'textfield',
+        items: [{
+            fieldLabel: 'First Name',
+            bind: '{firstName}'
+        },{
+            fieldLabel: 'Last Name',
+            bind: '{lastName}'
+        },{
+            xtype: 'button',
+            text: 'Submit',
+            bind: {
+                hidden: '{!firstName}'
+            }
+        },{
+            xtype: 'component',
+            bind: {
+                data: {
+                    bindTo: '{name}',
+                    // deep: true
+                }
+            }
+        }]
+    });
+
+    Ext.onReady(function () {
+       Ext.create('MyApp.view.TestView', {
+           renderTo: Ext.getBody(),
+           width: 400
+       });
+        // Ext.create('Ext.panel.Panel', {
+        //     title: 'Sign Up Form',
+
+        //     viewModel: {
+        //         type: 'test'
+        //     },
+
+        //     items: [{
+        //         xtype: 'checkbox',
+        //         boxLabel: 'Is Admin',
+        //         reference: 'isAdmin'
+        //     },{
+        //         xtype: 'textfield',
+        //         fieldLabel: 'Admin Key',
+        //         bind: {
+        //             disabled: '{!isAdmin.checked}'
+        //         }
+        //     }],
+        //     renderTo: document.body
+        // });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/ext/classic/theme-triton/build/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="/ext/build/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+    Ext.onReady(function () {
+        Ext.define('MyApp.view.foo.Foo', {
+            extend: 'Ext.panel.Panel',
+            xtype: 'foo',
+            controller: 'foo',
+            tbar: [{
+                xtype: 'button',
+                text: 'Add',
+                handler: 'onAdd'
+            }],
+            items: [
+                {
+                    xtype: 'grid',
+                    reference: 'myGrid',
+                    columns: [
+                        {
+                            text: '이름',
+                            dataIndex: 'name'
+                        }
+                    ],
+                    store: {
+                        data: [
+                            {name: '홍길동'}]
+                    },
+                    height: 100
+                }
+            ],
+        });
+
+        Ext.define('MyApp.view.foo.FooController', {
+            extend: 'Ext.app.ViewController',
+            alias: 'controller.foo',
+
+            onAdd: function () {
+                var grid = this.lookupReference('myGrid');
+                grid.store.add({name:'aa'})
+            }
+        });
+
+        Ext.create('MyApp.view.foo.Foo', {
+            heigth: 200,
+            renderTo: document.body
+        })
+    });
+</script>
+</body>
+</html>
